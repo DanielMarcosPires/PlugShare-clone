@@ -3,7 +3,7 @@ import './App.css'
 function App() {
   return (
     <>
-      <h2>Daniel Marcos Pires</h2>
+      <h2>teste</h2>
     </>
   )
 }
