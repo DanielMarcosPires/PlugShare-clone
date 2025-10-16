@@ -1,6 +1,5 @@
 import "./css/styles.css";
 import { index as NavigationButton } from "../../components/NavigationButton";
-import {icon as Justice} from "../../svgs/Justice/icon"
 export function Dashboard() {
   return (
     <>
@@ -15,7 +14,7 @@ export function Dashboard() {
         <h2>Explore</h2>
         <div>
           <NavigationButton to="">
-            <Justice />
+            <img src="/accessories.svg" alt="" />
           </NavigationButton>
         </div>
       </nav>
