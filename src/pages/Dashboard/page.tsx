@@ -1,4 +1,5 @@
 import './css/styles.css'
+//Daniel é o responsavel por fazer o dashboard
 export function Dashboard() {
   return (
     <>
