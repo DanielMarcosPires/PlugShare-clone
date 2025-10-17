@@ -2,6 +2,8 @@ import "./css/styles.css";
 import { index as NavigationButton } from "../../components/NavigationButton";
 import { index as Hero } from "./components/Hero";
 
+import './css/styles.css'
+//Daniel é o responsavel por fazer o dashboard
 export function Dashboard() {
   return (
     <>
