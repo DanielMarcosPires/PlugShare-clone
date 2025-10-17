@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: "Quicksand", sans-serif;
+}
+
+:root{
+  --white-color: #FFFFFF;
+  --primary-button: #01C09A;
+  --secondary-button: #ffdb63;
+  --button-inative: #ff6363;
 }

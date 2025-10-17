@@ -1,0 +1,35 @@
+.navigationDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navigationDiv p{
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation-button{
+    background: var(--primary-button);
+    border-radius: 50%;
+    transition: .2s;    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    --larguraAltura:80px;
+    height: var(--larguraAltura);
+    width: var(--larguraAltura);
+}
+
+.navigation-button-inactive{
+    background: var(--button-inative);
+}
+
+.navigation-button-active{
+    background: var(--secondary-button)
+}
+
+.navigation-button:hover{
+    background: var(--secondary-button);
+}
