@@ -8,3 +8,10 @@
   list-style: none;
   font-family: "Quicksand", sans-serif;
 }
+
+:root{
+  --white-color: #FFFFFF;
+  --primary-button: #01C09A;
+  --secondary-button: #ffdb63;
+  --button-inative: #ff6363;
+}

@@ -23,3 +23,13 @@
     font-size: calc(8px*3);
     text-shadow: 0 4px 8px #00000095;
 }
+.navigation{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 8px 24px;
+}
+.navigation ul{
+    display: flex;
+    justify-content: space-around;
+}
