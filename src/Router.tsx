@@ -10,6 +10,7 @@ export default function Router() {
   return (
     <Routes>
       <Route path='/' element={<BuscaDeCarro/>} />
+      <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/brand' element={<BrandSearch/>} />
     </Routes>
   )
