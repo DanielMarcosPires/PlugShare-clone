@@ -9,6 +9,7 @@ import BrandSearch from './pages/BrandSearch/page'
 export default function Router() {
   return (
     <Routes>
+      <Route path='/car' element={<BuscaDeCarro/>} />
       <Route path='/' element={<BuscaDeCarro/>} />
       <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/brand' element={<BrandSearch/>} />
