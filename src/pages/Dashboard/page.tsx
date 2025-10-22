@@ -1,8 +1,12 @@
 import "./css/styles.css";
+
 import { index as NavigationButton } from "../../components/NavigationButton";
+import { index as Carrosel } from "../../components/Carrosel";
+
 import { index as Hero } from "./components/Hero";
-import { index as Profile } from "./components/Profile";
+
 import "./css/styles.css";
+import { motion } from "framer-motion";
 //Daniel é o responsavel por fazer o dashboard
 export function Dashboard() {
   return (
@@ -37,6 +41,17 @@ export function Dashboard() {
             <h3>There are 10 Charging Stations nearby</h3>
             <p>Nearest one is just 1 km away</p>
           </Hero>
+        </section>
+        <section>
+          <Carrosel>
+            <motion.div className="gridSlide">
+              <img src="/imagensCarrosel/imagem4.png" alt="" />
+              <img src="/imagensCarrosel/imagem2.png" alt="" />
+            </motion.div>
+            <motion.div className="gridSlide">
+              <img src="/imagensCarrosel/imagem3.png" alt="" />
+            </motion.div>
+          </Carrosel>
         </section>
       </main>
     </>
