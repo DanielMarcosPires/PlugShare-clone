@@ -6,7 +6,7 @@
     background: url('../../../assets/Rectangle.png') no-repeat center;
     background-size: cover;
 }
-.header div{
+.header_info{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -39,4 +39,30 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2,1fr);
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+.iconProfile{
+    background: #fff;
+    border-radius: 100%;
+
+    box-shadow: 0 4px 4px #000;
+
+    color: #000;
+
+    position: absolute;
+    right: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    --sizeEqual:48px;
+    width: var(--sizeEqual) ;
+    height: var(--sizeEqual) ;
 }

@@ -6,16 +6,22 @@ import { index as Carrosel } from "../../components/Carrosel";
 import { index as Hero } from "./components/Hero";
 
 import "./css/styles.css";
-import { motion } from "framer-motion";
-//Daniel é o responsavel por fazer o dashboard
+import { Link, Outlet } from "react-router-dom";
+import { CircleUser } from "lucide-react";
+
 export function Dashboard() {
   return (
     <>
       <header className="header">
-        <div>
-          <span className="headerSpan">New Launch</span>
-          <h3 className="headerTitle">KIA EV6</h3>
-          <img src="/carro.png" alt="Carro" />
+        <div className="flex">
+          <div className="header_info">
+            <span className="headerSpan">New Launch</span>
+            <h3 className="headerTitle">KIA EV6</h3>
+            <img src="/carro.png" alt="Carro" />
+          </div>
+          <Link className="iconProfile" to="profile">
+            <CircleUser size={50} />
+          </Link>
         </div>
       </header>
       <nav className="navigation">
@@ -43,15 +49,8 @@ export function Dashboard() {
           </Hero>
         </section>
         <section>
-          <Carrosel>
-            <motion.div className="gridSlide">
-              <img src="/imagensCarrosel/imagem4.png" alt="" />
-              <img src="/imagensCarrosel/imagem2.png" alt="" />
-            </motion.div>
-            <motion.div className="gridSlide">
-              <img src="/imagensCarrosel/imagem3.png" alt="" />
-            </motion.div>
-          </Carrosel>
+          <h3>Explore EV CLUB</h3>
+          <Carrosel></Carrosel>
         </section>
       </main>
     </>

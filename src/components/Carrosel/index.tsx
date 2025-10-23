@@ -2,16 +2,16 @@
 import "./css/styles.css";
 
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { SlideContext } from "../../context/Slide";
 
-interface CarroselProps {
-  children?: React.ReactNode;
-}
 
-function Carrosel({ children }: CarroselProps) {
+function Carrosel() {
   const carousel = useRef<HTMLDivElement | null>(null);
   const [width, setWidth] = useState(0);
 
+  const {image} = useContext(SlideContext);
+  
   useEffect(() => {
     console.log(carousel.current?.scrollWidth);
     // set width to total scrollable width minus visible width (or 0 if ref is null)
@@ -21,6 +21,8 @@ function Carrosel({ children }: CarroselProps) {
         : 0
     );
   }, []);
+
+
 
   return (
     <motion.div
@@ -33,12 +35,16 @@ function Carrosel({ children }: CarroselProps) {
         drag="x"
         dragConstraints={{ right: 0, left: -width }}
       >
-        {children}
+        {image.map((img, index) => (
+          <motion.div className="item" key={index}>
+            <img src={img.src} alt={img.title} />
+          </motion.div>
+        ))}
       </motion.div>
     </motion.div>
   );
 }
 
-export function index({ children }: CarroselProps) {
-  return <Carrosel>{children}</Carrosel>;
+export function index() {
+  return <Carrosel/>;
 }
