@@ -15,3 +15,20 @@
   --secondary-button: #ffdb63;
   --button-inative: #ff6363;
 }
+
+/* Global styles to ensure buttons are visible */
+.cdp-location-btn {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 9999 !important;
+}
+
+/* Override any potential display: none styles */
+.cdp-location-btn[style*='display: none'],
+.cdp-location-btn[style*='visibility: hidden'] {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
