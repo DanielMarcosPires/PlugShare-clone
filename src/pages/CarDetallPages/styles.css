@@ -1,0 +1,130 @@
+.cd-container {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #ffffff;
+  min-height: 100vh;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.cd-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.cd-back {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.cd-logo {
+  height: 40px;
+}
+
+.cd-car-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cd-info {
+  padding: 16px;
+}
+
+.cd-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.cd-price {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.cd-rating {
+  color: #ffd700;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.cd-colors {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.cd-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.cd-specs {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  margin: 0 16px 16px;
+}
+
+.cd-spec {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.cd-variants {
+  padding: 0 16px;
+}
+
+.cd-variant {
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+}
+
+.cd-variant p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.cd-detail {
+  padding: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.cd-buttons {
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding: 16px;
+}
+
+.cd-button {
+  flex: 1;
+  padding: 12px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cd-test-drive {
+  background: #007bff;
+  margin-right: 8px;
+}
+
+.cd-buy {
+  background: #dc3545;
+}

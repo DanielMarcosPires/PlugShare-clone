@@ -1,0 +1,285 @@
+/* Container principal */
+.cbv-container {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #ffffff;
+  min-height: 100vh;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.7s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth background transition with custom easing */
+}
+
+/* Header */
+.cbv-header {
+  padding: 20px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+}
+
+.cbv-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Model section */
+.cbv-model-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 16px;
+  background: #f8f9fa;
+  position: relative;
+}
+
+.cbv-carousel-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.cbv-carousel-btn-left {
+  left: 16px;
+}
+
+.cbv-carousel-btn-right {
+  right: 16px;
+}
+
+.cbv-model-info {
+  text-align: center;
+  flex: 1;
+  padding: 0 20px;
+}
+
+.cbv-brand {
+  font-size: 14px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.cbv-model-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.cbv-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff4757;
+}
+
+/* Image container */
+.cbv-image-container {
+  position: relative;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+  margin: 0 16px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cbv-car-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: all 0.5s ease;
+}
+
+.cbv-favorite-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: #666;
+}
+
+.cbv-favorite-btn.cbv-favorite-active {
+  background: #ff4757;
+  color: white;
+}
+
+/* Color section */
+.cbv-color-section {
+  padding: 24px 16px;
+}
+
+.cbv-section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.cbv-colors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.cbv-color-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cbv-color-item:hover {
+  transform: translateY(-5px);
+}
+
+.cbv-color-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.cbv-color-selected .cbv-color-swatch {
+  border-color: #333;
+  box-shadow: 0 0 0 3px #ff4757;
+}
+
+.cbv-color-name {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+/* Model indicators */
+.cbv-model-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.cbv-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cbv-indicator-active {
+  background: #667eea;
+  transform: scale(1.2);
+}
+
+/* Action buttons */
+.cbv-actions {
+  display: flex;
+  gap: 16px;
+  padding: 20px 16px;
+  justify-content: center;
+  background: #ffffff;
+  position: sticky;
+  bottom: 0;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.cbv-primary-btn {
+  background: #ff4757;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 1;
+  max-width: 200px;
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cbv-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 71, 87, 0.4);
+}
+
+.cbv-secondary-btn {
+  background: transparent;
+  color: #333;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 1;
+  max-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.cbv-secondary-btn:hover {
+  border-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .cbv-container {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .cbv-colors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .cbv-image-container {
+    height: 200px;
+  }
+}
+
+/* Animações suaves */
+.cbv-car-image {
+  transition: all 0.5s ease;
+}
+
+.cbv-indicator {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Melhorias de acessibilidade */
+.cbv-carousel-btn:focus,
+.cbv-favorite-btn:focus {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
