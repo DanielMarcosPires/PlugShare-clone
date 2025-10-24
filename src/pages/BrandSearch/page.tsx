@@ -14,37 +14,35 @@ export default function BrandSearch() {
         <div className="bs-item">
           <div className="bs-texts">
             <div className="bs-title">KIA EV6</div>
-            <div className="bs-sub">VARIENTS →</div>
+            <div className="bs-sub">Varients +</div>
           </div>
           <div className="bs-car-wrap">
             <img src="/carro.png" alt="KIA EV6" className="bs-car" />
-            <img src="/chargerStation.svg" alt="Ícone" className="bs-c4ed" />
+            <span className="bs-cab">cab</span>
           </div>
         </div>
         <div className="bs-item">
           <div className="bs-texts">
             <div className="bs-title">KIA SELTOS</div>
-            <div className="bs-sub">VARIENTS →</div>
+            <div className="bs-sub">Varients +</div>
           </div>
           <div className="bs-car-wrap">
             <img src="/SUV.png" alt="KIA Seltos" className="bs-car" />
-            <img src="/chargerStation.svg" alt="Ícone" className="bs-c4ed" />
+            <span className="bs-cab">cab</span>
           </div>
         </div>
         <div className="bs-item">
           <div className="bs-texts">
             <div className="bs-title">KIA SELTOS</div>
-            <div className="bs-sub">VARIENTS →</div>
+            <div className="bs-sub">Varients +</div>
           </div>
           <div className="bs-car-wrap">
             <img src="/carro laranja.png" alt="KIA Seltos" className="bs-car" />
-            <img src="/chargerStation.svg" alt="Ícone" className="bs-c4ed" />
+            <span className="bs-cab">cab</span>
           </div>
         </div>
       </div>
-      <svg className="bs-menu-wave" viewBox="0 0 380 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 10 Q80 26 190 13 Q320 0 380 20 V26 H0 Z" fill="#3BA4DD"/>
-      </svg>
+      <div className="bs-curve-border"></div>
       <div className="bs-bottom">
         <button className="bs-circle" onClick={() => alert('Home')} aria-label="home">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
