@@ -12,6 +12,7 @@ import { CircleUser } from "lucide-react";
 export function Dashboard() {
   return (
     <>
+    <Outlet />
       <header className="header">
         <div className="flex">
           <div className="header_info">

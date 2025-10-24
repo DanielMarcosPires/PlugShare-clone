@@ -1,0 +1,29 @@
+
+.profile-button_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: .2s;
+}
+.profile-button_div p{
+    font-weight: 500;
+}
+.profile-button{
+    background: var(--primary-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 10px;
+
+    --sizeEqual:60px;
+
+    width: var(--sizeEqual);
+    height: var(--sizeEqual);
+}
+
+.profile-button_div:hover{
+    opacity: .7;
+}

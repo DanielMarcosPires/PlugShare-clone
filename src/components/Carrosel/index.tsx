@@ -3,14 +3,14 @@ import "./css/styles.css";
 
 import { motion } from "framer-motion";
 import { useContext, useEffect, useRef, useState } from "react";
-import { SlideContext } from "../../context/Slide";
+import { WebContext } from "../../context/Slide";
 
 
 function Carrosel() {
   const carousel = useRef<HTMLDivElement | null>(null);
   const [width, setWidth] = useState(0);
 
-  const {image} = useContext(SlideContext);
+  const {image} = useContext(WebContext);
   
   useEffect(() => {
     console.log(carousel.current?.scrollWidth);

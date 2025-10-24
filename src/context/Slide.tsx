@@ -6,21 +6,25 @@ export interface ImageProps {
   src: string;
   title: string;
 }
-interface SlideProviderProps {
+interface WebProviderProps {
   children: React.ReactNode;
 }
 interface ProviderValues {
   addImage: ({ src, title }: ImageProps) => string;
   image: { src: string; title: string }[];
+  darkMode:()=>void;
+  isOn:boolean
 }
-export const SlideContext = createContext<ProviderValues>({
+export const WebContext = createContext<ProviderValues>({
   addImage: () => "",
   image: [],
+  darkMode(){},
+  isOn:false
 });
 
-export const SlideProvider = ({ children }: SlideProviderProps) => {
+export const WebProvider = ({ children }: WebProviderProps) => {
   const [image, setImage] = useState<ImageProps[]>([]);
-
+  const [isOn, setIsOn] = useState(false);
   if(image.length === 0){
     setImage([
         {src: "", title: "Sem imagem!"},
@@ -32,14 +36,19 @@ export const SlideProvider = ({ children }: SlideProviderProps) => {
     return "Imagem adicionada com sucesso";
   }, []);
 
+  
+  const darkMode = () => setIsOn(!isOn);
+  
   const providerValues = {
     addImage,
     image,
+    darkMode,
+    isOn
   };
 
   return (
-    <SlideContext.Provider value={providerValues}>
+    <WebContext.Provider value={providerValues}>
       {children}
-    </SlideContext.Provider>
+    </WebContext.Provider>
   );
 };

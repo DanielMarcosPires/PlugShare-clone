@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import BrandSearch from "./pages/BrandSearch/page.tsx";
 import BuscaDeCarro from "./pages/BuscaDeCarro/page.tsx";
 import { Dashboard } from "./pages/Dashboard/page.tsx";
-import { SlideProvider } from "./context/Slide.tsx";
+import { WebProvider } from "./context/Slide.tsx";
 import App from "./router.tsx";
 import Profile from "./pages/Dashboard/page/Profile/page.tsx";
 
@@ -39,8 +39,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <SlideProvider>
+    <WebProvider>
       <RouterProvider router={router} />
-    </SlideProvider>
+    </WebProvider>
   </StrictMode>
 );
