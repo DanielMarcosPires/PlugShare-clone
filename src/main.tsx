@@ -6,7 +6,7 @@ import BrandSearch from "./pages/BrandSearch/page.tsx";
 import BuscaDeCarro from "./pages/BuscaDeCarro/page.tsx";
 import { Dashboard } from "./pages/Dashboard/page.tsx";
 import { WebProvider } from "./context/Slide.tsx";
-import App from "./router.tsx";
+import App from "./app.tsx";
 import Profile from "./pages/Dashboard/page/Profile/page.tsx";
 
 /**
