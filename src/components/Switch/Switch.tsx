@@ -1,15 +1,18 @@
 import React, { useContext } from "react";
 import * as motion from "motion/react-client";
-import { WebContext } from "../../context/Slide";
+import { WebContext } from "../../context/webContext";
 import { Moon, Sun } from "lucide-react";
 export default function Switch() {
   const {darkMode,isOn} = useContext(WebContext);
+  
+  const switchControl = isOn
+  
   return (
     <button
       className="toggle-container"
       style={{
         ...container,
-        justifyContent: "flex-" + (isOn ? "start" : "end"),
+        justifyContent: "flex-" + (switchControl ? "start" : "end"),
       }}
       onClick={darkMode}
     >
@@ -18,7 +21,7 @@ export default function Switch() {
         visualDuration:0.2,
         bounce:0.2
       }}>
-        {isOn? <Sun color="#ffbf00ff"/>: <Moon color="#fff"/>}
+        {switchControl? <Sun color="#ffbf00ff"/>: <Moon color="#fff"/>}
       </motion.div>
     </button>
   );

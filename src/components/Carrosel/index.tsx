@@ -3,7 +3,7 @@ import "./css/styles.css";
 
 import { motion } from "framer-motion";
 import { useContext, useEffect, useRef, useState } from "react";
-import { WebContext } from "../../context/Slide";
+import { WebContext } from "../../context/webContext";
 
 
 function Carrosel() {

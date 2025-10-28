@@ -22,7 +22,7 @@ export default function Profile() {
       <header className="profile-header">
         <div className="profile-div">
           <nav className="profile-nav">
-            <Link className="exit" to="/dashboard">
+            <Link className="exit" to="/">
               <ArrowLeft size={35} />
             </Link>
             <Switch />

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Heart, Home, Zap, Bell, SlidersHorizontal } from "lucide-react";
 import './styles.css';
 
-export default function App() {
+export default function BuscaDeCarro() {
   const carsData = [
     { id: 1, name: "KIA EV", price: 45000, img: "/carro.png", rating: 4.5, new: true },
     { id: 2, name: "BENTLY EO1", price: 990000, img: "/carro vermelho.png", rating: 4.7 },

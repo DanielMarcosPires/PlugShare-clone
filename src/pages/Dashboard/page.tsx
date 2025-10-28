@@ -2,17 +2,26 @@ import "./css/styles.css";
 
 import { index as NavigationButton } from "../../components/NavigationButton";
 import { index as Carrosel } from "../../components/Carrosel";
-
 import { index as Hero } from "./components/Hero";
-
-import "./css/styles.css";
 import { Link, Outlet } from "react-router-dom";
+import { useContext, type CSSProperties } from "react";
+import { WebContext } from "../../context/webContext";
+import { FaCar, FaChargingStation } from "react-icons/fa";
 import { CircleUser } from "lucide-react";
+import { FaCartShopping } from "react-icons/fa6";
+import { GoGitCompare } from "react-icons/go";
 
 export function Dashboard() {
+  const { webStructure } = useContext(WebContext);
+
+  const controlStyle = {
+    background: webStructure.background,
+    color: webStructure.text,
+  } as CSSProperties;
+
   return (
-    <>
-    <Outlet />
+    <div style={controlStyle}>
+      <Outlet />
       <header className="header">
         <div className="flex">
           <div className="header_info">
@@ -29,31 +38,31 @@ export function Dashboard() {
         <h2>Explore</h2>
         <ul>
           <NavigationButton title="Cars" to="/">
-            <img src="/car.svg" alt="iconCar" />
+            <FaCar color={webStructure.text} size={30} />
           </NavigationButton>
           <NavigationButton title="Charging Stations" to="/changer-station">
-            <img src="/chargerStation.svg" alt="iconChargerStation" />
+            <FaChargingStation color={webStructure.text} size={30} />
           </NavigationButton>
           <NavigationButton title="Accessories" to="/accessories">
-            <img src="/accessories.svg" alt="iconAccessories" />
+            <FaCartShopping color={webStructure.text} size={30} />
           </NavigationButton>
           <NavigationButton title="Compare Cars" to="/justice">
-            <img src="/justice.svg" alt="iconJustice" />
+            <GoGitCompare color={webStructure.text} size={30} />
           </NavigationButton>
         </ul>
       </nav>
       <main>
         <section>
           <Hero urlImage="./map.png">
-            <h3>There are 10 Charging Stations nearby</h3>
+            <h3 >There are 10 Charging Stations nearby</h3>
             <p>Nearest one is just 1 km away</p>
           </Hero>
         </section>
         <section>
           <h3>Explore EV CLUB</h3>
-          <Carrosel></Carrosel>
+          <Carrosel/>
         </section>
       </main>
-    </>
+    </div>
   );
 }
