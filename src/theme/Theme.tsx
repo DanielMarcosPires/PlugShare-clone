@@ -1,11 +1,18 @@
-interface ThemeColors {
+interface lightProps {
   black: string;
   white: string;
   white2: string;
   white3: string;
 }
 
-interface ColorsExtra {
+interface darkProps {
+  black: string;
+  white: string;
+  white2: string;
+  white3: string;
+}
+
+interface webPalleteProps {
   red: string;
   yellow: string;
   green: string;
@@ -13,9 +20,9 @@ interface ColorsExtra {
 }
 
 export class Theme {
-  private light: ThemeColors;
-  private dark: ThemeColors;
-  private WebPallete_Colors: ColorsExtra;
+  private light: lightProps;
+  private dark: darkProps;
+  private WebPallete_Colors: webPalleteProps;
 
   constructor() {
     this.light = {
@@ -26,7 +33,7 @@ export class Theme {
     };
     this.dark = {
       black: "#fff",
-      white: "#000000ff",
+      white: "#000",
       white2: "#121212",
       white3: "#2C2C2C",
     };

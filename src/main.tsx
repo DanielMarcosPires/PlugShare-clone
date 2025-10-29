@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard/page.tsx";
 import { WebProvider } from "./context/webContext.tsx";
 import Profile from "./pages/Dashboard/page/Profile/page.tsx";
-import App from "./pages/BuscaDeCarro/page.tsx";
 
 /**
  * Rotas disponíveis na aplicação:

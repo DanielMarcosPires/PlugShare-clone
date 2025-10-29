@@ -1,4 +1,6 @@
-
+.ajuste{
+    height: 100vh;
+}
 .header{
     background: radial-gradient(#fff 20px, #000 50%) no-repeat;
     background-position: 0 0px;

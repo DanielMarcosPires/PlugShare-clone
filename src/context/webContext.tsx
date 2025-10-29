@@ -16,6 +16,7 @@ interface webStructure {
   textInverted: string;
   textDestaque: string;
   background: string;
+  invertedBackground:string;
 }
 
 interface ProviderValues {
@@ -30,7 +31,14 @@ export const WebContext = createContext<ProviderValues>({
   image: [],
   darkMode() {},
   isOn: false,
-  webStructure: {},
+  webStructure: {
+    principalTitle: "",
+    text: "",
+    textInverted: "",
+    textDestaque: "",
+    background: "",
+    invertedBackground:""
+  },
 });
 
 export const WebProvider = ({ children }: WebProviderProps) => {
@@ -61,6 +69,7 @@ export const WebProvider = ({ children }: WebProviderProps) => {
     textInverted: theme.Get_Light(!isOn).black,
     textDestaque: theme.Get_WebPallete_Colors().green,
     background: theme.Get_Light(isOn).white,
+    invertedBackground:theme.Get_Light(!isOn).white
   };
 
   const providerValues = {
