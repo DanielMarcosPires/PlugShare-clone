@@ -1,0 +1,46 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Planta -->
+  <g transform="translate(250, 170)">
+    <rect x="-15" y="-20" width="30" height="20" fill="#00C89C" />
+    <path d="M0,0 C-10,-30 -20,-40 -5,-60 M0,0 C10,-30 20,-40 5,-60 M0,-10 C-15,-30 -10,-50 0,-70 M0,-10 C15,-30 10,-50 0,-70" stroke="#006747" stroke-width="2" fill="none" />
+  </g>
+  
+  <!-- Cadeira -->
+  <g transform="translate(100, 150)">
+    <rect x="-40" y="-40" width="80" height="40" rx="5" fill="#00C89C" />
+    <rect x="-35" y="0" width="10" height="30" fill="#006747" />
+    <rect x="25" y="0" width="10" height="30" fill="#006747" />
+  </g>
+  
+  <!-- Pessoa -->
+  <g transform="translate(100, 100)">
+    <!-- Corpo -->
+    <rect x="-20" y="-30" width="40" height="60" rx="10" fill="#FF9F43" />
+    
+    <!-- Cabeça -->
+    <circle cx="0" cy="-50" r="20" fill="#FFE0B2" />
+    <path d="M-10,-55 C-5,-65 5,-65 10,-55" stroke="#333" stroke-width="1" fill="none" />
+    <circle cx="-7" cy="-50" r="2" fill="#333" />
+    <circle cx="7" cy="-50" r="2" fill="#333" />
+    
+    <!-- Cabelo -->
+    <path d="M-15,-60 C-20,-70 -10,-80 0,-80 C10,-80 20,-70 15,-60" fill="#333" />
+    
+    <!-- Braços -->
+    <rect x="-40" y="-20" width="20" height="10" rx="5" fill="#FFE0B2" />
+    <rect x="20" y="-20" width="30" height="10" rx="5" fill="#FFE0B2" />
+    
+    <!-- Celular -->
+    <rect x="40" y="-25" width="15" height="25" rx="2" fill="#333" />
+    <rect x="42" y="-22" width="11" height="19" rx="1" fill="#FFF" />
+  </g>
+  
+  <!-- Tela de computador -->
+  <g transform="translate(180, 70)">
+    <rect x="-40" y="-30" width="80" height="60" rx="5" fill="#FFF" stroke="#DDD" stroke-width="2" />
+    <rect x="-35" y="-25" width="70" height="50" rx="3" fill="#F5F5F5" />
+    <circle cx="0" cy="-10" r="10" fill="#FF6B6B" />
+    <rect x="-25" y="10" width="50" height="5" rx="2" fill="#DDD" />
+    <rect x="-25" y="20" width="50" height="5" rx="2" fill="#DDD" />
+  </g>
+</svg>

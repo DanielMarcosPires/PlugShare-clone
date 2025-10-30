@@ -1,61 +1,63 @@
-import React, { useState, useRef, useEffect } from 'react'
-import './Style.css'
+import { useRef, useState } from 'react';
+import './Opt.css';
+import InputOtp from '../../components/Input-otp-react/Input-otp';
 
-export default function Opt() {
-  const [code, setCode] = useState(['', '', '', '']);
-  const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+const Opt = () => {
+  const [otp, setOtp] = useState<string[]>(['1', '9', '2', '3']);
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   
-  const handleChange = (index, value) => {
-    // Permitir apenas números
-    if (value && !/^\d+$/.test(value)) return;
-    
-    const newCode = [...code];
-    newCode[index] = value;
-    setCode(newCode);
-    
-    // Mover para o próximo campo se o atual foi preenchido
-    if (value && index < 3) {
-      inputRefs[index + 1].current.focus();
+  const handleResendOtp = () => {
+    // Lógica para reenviar o código OTP
+    console.log('Reenviando código OTP');
+  };
+
+  const handleVerify = (e?: React.FormEvent<HTMLFormElement>) => {
+    if (e) e.preventDefault();
+    // Lógica para verificar o código OTP
+    console.log('Verificando código:', otp.join(''));
+  };
+
+  const handleChange = (index: number) => (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value.replace(/\D/g, '').slice(0, 1);
+    setOtp(prev => {
+      const next = [...prev];
+      next[index] = val;
+      return next;
+    });
+    if (val && index < otp.length - 1) {
+      inputRefs.current[index + 1]?.focus();
     }
   };
-  
-  const handleKeyDown = (index, e) => {
-    // Mover para o campo anterior ao pressionar backspace em um campo vazio
-    if (e.key === 'Backspace' && !code[index] && index > 0) {
-      inputRefs[index - 1].current.focus();
-    }
-  };
-  
+
   return (
-    <div className="opt-container">
-      <div className="opt-image">
-        <img src="/public/titulopt3.png" alt="Verification" />
+    <div className="otp-container">
+      <div className="otp-illustration">
+        <img src="/capa3.png" alt="Ilustração de verificação OTP" />
       </div>
       
-      <h1>Enter 4-digit<br />Verification code</h1>
-      
-      <p className="opt-description">
-        Code send to +91 82****89 and to your registered email. This code will expired in 01:30
-      </p>
-      
-      <div className="code-inputs">
-        {code.map((digit, index) => (
-          <input
-            key={index}
-            ref={inputRefs[index]}
-            type="text"
-            className="code-box"
-            value={digit}
-            maxLength={1}
-            onChange={(e) => handleChange(index, e.target.value)}
-            onKeyDown={(e) => handleKeyDown(index, e)}
-          />
-        ))}
+      <div className="otp-content">
+        <h1>Enter 4-digit<br />Verification code</h1>
+        
+        <p className="otp-description">
+          Code sent to +55 (67) **** card to your registered email. This code will expire in 10:00
+        </p>
+        
+        <form className="otp-form" onSubmit={handleVerify}>
+          <div className="otp-digits">
+            <InputOtp />
+          </div>
+
+          <button type="button" className="resend-button" onClick={handleResendOtp}>
+            Resend OTP
+          </button>
+          
+          <button type="submit" className="verify-button">
+            VERIFY
+          </button>
+        </form>
       </div>
-      
-      <button className="resend-btn">Resend OTP</button>
-      
-      <button className="verify-btn">VERIFY</button>
     </div>
-  )
-}
+  );
+};
+
+export default Opt;
