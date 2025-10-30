@@ -9,6 +9,8 @@ import { WebProvider } from "./context/Slide.tsx";
 import App from "./app.tsx";
 import Profile from "./pages/Dashboard/page/Profile/page.tsx";
 import Opt from "./pages/Opt/Opt.tsx";
+import Singup from "./pages/Singup/Sing.tsx";
+import Singin from "./pages/Singin/Singin.tsx";
 
 /**
  * Rotas disponíveis na aplicação:
@@ -20,7 +22,7 @@ import Opt from "./pages/Opt/Opt.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Singin />,
     children: [
       { path: "/", element: <BuscaDeCarro /> },
       { path: "brand", element: <BrandSearch /> },

@@ -1,34 +1,38 @@
 import React from 'react'
-import './Style.css'
+import InputForm from '../../components/Input-form/input-form'
+import DarkButton from '../../components/DarkButton/DarkButton'
 
 export default function Singin() {
   return (
-    <div className="signin-container">
-      <div className="illustration">
-        <img src="/public/titulopt3.png" alt="Conversation" className="conversation-img" />
+    <div className="pagina">
+    <form className="form-singup">
+
+      <img src="/pg3.png" alt="" />
+      <h2>Glad to meet  you again!</h2>
+
+
+      <InputForm type='text' placeholder="Numero Email" />
+
+      <button className="btn-singup">Cadastrar</button>
+      <p className="text-singup">
+        Já possui uma conta? <span className="link-singup">Faça login</span>
+      </p>
+
+      <div>
+        <nav className="plataforms">
+          <DarkButton>
+            <img src="/facebookIcon.svg" alt="" />
+          </DarkButton>
+          <DarkButton>
+            <img src="/googleIcon.svg" alt="" />
+          </DarkButton>
+          <DarkButton>
+            <img src="/appleIcon.svg" alt="" />
+          </DarkButton>
+        </nav>
       </div>
-      
-      <h1>Glad to meet you again!</h1>
-      
-      <div className="input-field">
-        <input type="text" placeholder="Email / Mobile Number" />
-      </div>
-      
-      <button className="signin-btn">SIGN IN NOW</button>
-      
-      <div className="divider">
-        <span>Or continue with</span>
-      </div>
-      
-      <div className="social-login">
-        <button className="social-btn google">G</button>
-        <button className="social-btn apple">A</button>
-        <button className="social-btn facebook">f</button>
-      </div>
-      
-      <div className="register-link">
-        <p>Not registered yet? <a href="#">Sign Up Now</a></p>
-      </div>
+    </form>
     </div>
   )
 }
+

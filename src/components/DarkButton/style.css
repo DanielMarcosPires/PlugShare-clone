@@ -1,0 +1,13 @@
+.btn-dark {
+    background: #000;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    border-radius: 8px;
+    width: 88px;
+    height: 48px;
+}
