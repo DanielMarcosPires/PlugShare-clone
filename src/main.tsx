@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <BuscaDeCarro /> },
       { path: "brand", element: <BrandSearch /> },
-      { path: "add-ev-vehicle", element: <AddEvVehicle /> },
+      { path: "add-ev-vehicle", element: <AddEvVehicle /> },//teste
       { path: "ev-network-set-view", element: <EVNetworkSetView /> },
       {
         path: "dashboard",
