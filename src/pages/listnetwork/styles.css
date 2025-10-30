@@ -1,0 +1,183 @@
+/* styles.css for ListNetwork page */
+
+.list-network-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+  overflow-y: auto;
+}
+
+/* Barra de pesquisa e abas */
+.search-bar-container {
+  padding: 12px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search-icon {
+  font-size: 20px;
+  color: #666;
+}
+
+/* Abas */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.tab {
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.tab.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+  font-weight: bold;
+}
+
+/* Modo de visualização */
+.view-mode {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.view-button {
+  padding: 4px 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  color: #666;
+}
+
+.view-button.active {
+  background-color: #e0e0e0;
+  border-radius: 16px;
+}
+
+.view-controls {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.control-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Lista de estações */
+.station-list {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.station-item {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.station-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.station-info {
+  padding: 12px;
+  flex: 1;
+}
+
+.station-info h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.station-info p {
+  margin: 2px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.station-rating {
+  color: #FFC107;
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.status-button {
+  background-color: #00BFA5;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Botão Load More */
+.load-more {
+  background: transparent;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  padding: 12px;
+  width: 100%;
+}
+
+/* Media queries para mobile */
+@media (max-width: 480px) {
+  .station-item {
+    flex-direction: column;
+  }
+  
+  .station-image {
+    width: 100%;
+    height: 150px;
+  }
+}

@@ -31,7 +31,7 @@ export function Dashboard() {
           <NavigationButton title="Cars" to="/">
             <img src="/car.svg" alt="iconCar" />
           </NavigationButton>
-          <NavigationButton title="Charging Stations" to="/changer-station">
+          <NavigationButton title="Charging Stations" to="/charging-station">
             <img src="/chargerStation.svg" alt="iconChargerStation" />
           </NavigationButton>
           <NavigationButton title="Accessories" to="/accessories">
