@@ -2,10 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import BuscaDeCarro from "./pages/BuscaDeCarro/page.tsx";
 import { Dashboard } from "./pages/Dashboard/page.tsx";
-import { WebProvider } from "./context/Slide.tsx";
-import App from "./router.tsx";
+import { WebProvider } from "./context/webContext.tsx";
 import Profile from "./pages/Dashboard/page/Profile/page.tsx";
 
 /**
@@ -18,19 +16,11 @@ import Profile from "./pages/Dashboard/page/Profile/page.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Dashboard />,
     children: [
-      { path: "/", element: <BuscaDeCarro /> },
-      { path: "brand", element: <BrandSearch /> },
       {
-        path: "dashboard",
-        element: <Dashboard />,
-        children: [
-          {
-            path: "profile",
-            element:<Profile />,
-          },
-        ],
+        path: "profile",
+        element: <Profile />,
       },
     ],
   },

@@ -11,10 +11,12 @@
   background: var(--white-color);
 
   width: 100%;  
+  height: 100vh;
   position: absolute;
   
   animation: fadeIn 0.5s ease-in-out;
 
+  left: 0;
   z-index: 2;
 }
 

@@ -1,18 +1,25 @@
 .heroMap{
     background: url("../map.png") no-repeat center;
-    background-size: cover cover;
-    width: 377px;
-    height: 165px;
+    background-size: cover;
+    width: 90%;
+    height: 205px;
     border-radius: 8px;
     margin: 0 auto;
     overflow: hidden;
 }
 .heroMap header{
     background: #00000083;
-    text-align: center;
+    
+    align-items: center;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+
 
     width: 100%;
-    padding: 8px 0;
+    height: 70px;
 }
 .heroMap h3{
     color: var(--secondary-button);
@@ -21,4 +28,7 @@
     color: var(--white-color);
     font-size: 16px;
     font-weight: 700;
+}
+.margin{
+    padding: 2em;
 }
