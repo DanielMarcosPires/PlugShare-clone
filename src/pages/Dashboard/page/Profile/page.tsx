@@ -22,6 +22,7 @@ export default function Profile() {
   
   const {webStructure} = useContext(WebContext)
   
+  
 
   const style ={
     fundo:{
@@ -40,13 +41,13 @@ export default function Profile() {
     } as CSSProperties
   }
 
-  const name = "{username}";
+  const name = localStorage.getItem("name");
   return (
     <div className="profile-page" style={style.fundo}>
       <header className="profile-header">
         <div className="profile-div">
           <nav className="profile-nav">
-            <Link className="exit" to="/">
+            <Link className="exit" to="/dashboard">
               <ArrowLeft color={style.icons} size={35} />
             </Link>
             <Switch />

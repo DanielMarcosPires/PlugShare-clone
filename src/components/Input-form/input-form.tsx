@@ -1,4 +1,4 @@
-import React, { Component, type ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import './style.css'
 
 export default function InputForm({...props}:ComponentProps<"input">) {

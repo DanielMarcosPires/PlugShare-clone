@@ -1,13 +1,23 @@
-import { Arco } from "../../components/Arco";
+import { useNavigate } from 'react-router-dom';
 import './css/styles.css';
+import { useEffect } from 'react';
+import { LoaderCircle } from 'lucide-react';
 
-export default function Page() {
+export default function Boot() {
+    const navigate = useNavigate();
+
+    const loadingTo = ()=>{
+        navigate("/sign-in")
+    }
+
+    useEffect(()=>{
+       setTimeout(loadingTo,2000) 
+    },[])
+
     return (
         <div className="capa">
-                {/* SVG com os arcos e o ponto */}
                 <img src="/capa.png" alt="logo" className="w-1/2" />
-                {/* Texto principal */}
+                <LoaderCircle size={50} className='spin-animate' />
         </div>
     );
 }
-export { Page as page };

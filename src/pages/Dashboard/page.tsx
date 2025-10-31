@@ -51,7 +51,7 @@ export function Dashboard() {
         <nav className="navigation">
           <h2 style={style.text}>Explore</h2>
           <ul>
-            <NavigationButton title="Cars" to="/">
+            <NavigationButton title="Cars" to="/car">
               <FaCar color={webStructure.textInverted} size={30} />
             </NavigationButton>
             <NavigationButton title="Stations" to="/changer-station">

@@ -1,0 +1,11 @@
+.text-singup{
+    text-align: center;
+}
+
+.pagina-header{
+    display: flex;
+    justify-content: end;
+    border: none;
+    padding: 8px 0;
+    width: 327px;
+}

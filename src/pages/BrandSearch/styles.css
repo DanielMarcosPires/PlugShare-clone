@@ -22,10 +22,10 @@
 }
 
 .bs-header-row {
-  width: 100vw;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  gap: 4em;
+  padding: 2em 0;
   background: #fff;
   min-height: 38px;
 }

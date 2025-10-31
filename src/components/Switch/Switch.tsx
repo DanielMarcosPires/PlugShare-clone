@@ -7,6 +7,31 @@ export default function Switch() {
   
   const switchControl = isOn
   
+
+  const container = {
+  width: 120,
+  height: 50,
+  backgroundColor: switchControl? "#fff":"#ffbf00ff",
+  borderRadius: 50,
+  cursor: "pointer",
+  display: "flex",
+  overflow:"hidden",
+  alignItems:"center",
+  padding: 15,
+  boxShadow:"inset 0 0 2px 2px #000"
+} as React.CSSProperties;
+const handle = {
+  width: 35,
+  height: 35,
+  backgroundColor: switchControl? "#fff":"#ffbf00ff",
+  boxShadow:"0 0 8px 2px #00000050",
+  borderRadius: "50%",
+  display:"flex",
+  justifyContent:"center",
+  alignItems:"center"
+} as React.CSSProperties;
+
+
   return (
     <button
       className="toggle-container"
@@ -27,25 +52,4 @@ export default function Switch() {
   );
 }
 
-const container = {
-  width: 120,
-  height: 50,
-  backgroundColor: "#01c09a",
-  borderRadius: 50,
-  cursor: "pointer",
-  display: "flex",
-  alignItems:"center",
-  padding: 15,
-  border:"solid 2px #000",
-  boxShadow:"0 0 10px 5px #00000075, inset 0 0 2px 8px #005b49ff"
-} as React.CSSProperties;
-const handle = {
-  width: 40,
-  height: 40,
-  backgroundColor: "#005b49ff",
-  boxShadow:"0 0 4px #00000050",
-  borderRadius: "50%",
-  display:"flex",
-  justifyContent:"center",
-  alignItems:"center"
-} as React.CSSProperties;
+
