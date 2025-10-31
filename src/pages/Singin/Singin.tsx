@@ -27,7 +27,7 @@ export default function Singin() {
         navigate("/dashboard");
       }, 2000);
     } else {
-      toast.error(`Email: ${email} inválido!`);
+      toast.error(`Email: ${email} não cadastrado!`);
     }
   }
 
@@ -57,7 +57,7 @@ export default function Singin() {
           placeholder="Numero Email"
         />
 
-        <button className="btn-singup">Cadastrar</button>
+        <button className="btn-singup">Entrar</button>
         <div>
           <nav className="plataforms">
             <DarkButton>
