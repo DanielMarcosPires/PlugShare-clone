@@ -6,6 +6,8 @@ import BuscaDeCarro from "./pages/BuscaDeCarro/page.tsx";
 import { Dashboard } from "./pages/Dashboard/page.tsx";
 import { WebProvider } from "./context/Slide.tsx";
 import ListNetwork from "./pages/listnetwork/ListNetwork.tsx";
+import { OrderDetails } from "./pages/ordempages/page.tsx";
+import { Booked } from "./pages/Booked/page.tsx";
 
 /**
  * Rotas disponíveis na aplicação:
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
       {path:"accessories", element:<></>},
       {path:"compare-cars", element:<></>},
     ]
+  },
+  {
+    path: "/order-details",
+    element: <OrderDetails />
+  },
+  {
+    path: "/booked",
+    element: <Booked />
   },
 ]);
 
