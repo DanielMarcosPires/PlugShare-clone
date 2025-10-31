@@ -2,15 +2,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import BrandSearch from "./pages/BrandSearch/page.tsx";
 import BuscaDeCarro from "./pages/BuscaDeCarro/page.tsx";
 import { Dashboard } from "./pages/Dashboard/page.tsx";
 import { WebProvider } from "./context/Slide.tsx";
-import App from "./app.tsx";
+import App from "./router.tsx";
 import Profile from "./pages/Dashboard/page/Profile/page.tsx";
-import Opt from "./pages/Opt/Opt.tsx";
-import Singup from "./pages/Singup/Sing.tsx";
-import Singin from "./pages/Singin/Singin.tsx";
 
 /**
  * Rotas disponíveis na aplicação:
@@ -22,7 +18,7 @@ import Singin from "./pages/Singin/Singin.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Singin />,
+    element: <App />,
     children: [
       { path: "/", element: <BuscaDeCarro /> },
       { path: "brand", element: <BrandSearch /> },
@@ -32,11 +28,10 @@ const router = createBrowserRouter([
         children: [
           {
             path: "profile",
-            element: <Profile />,
+            element:<Profile />,
           },
         ],
       },
-      { path: "opt", element: <Opt /> }
     ],
   },
 ]);

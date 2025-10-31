@@ -1,0 +1,124 @@
+.add-ev-vehicle-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+  background-color: white;
+  max-width: 430px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 10px 0 0;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+  flex-grow: 1;
+  padding-right: 24px;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.section-title {
+  margin: 20px 0 15px;
+}
+
+.section-title h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.plug-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.plug-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.plug-icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.vehicle-image {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.vehicle-image img {
+  max-width: 80%;
+  height: auto;
+}
+
+.terms {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+}
+
+.add-search-button {
+  background-color: #00C09A;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
