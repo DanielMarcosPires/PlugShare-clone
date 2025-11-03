@@ -1,6 +1,6 @@
-import React, { useContext, type ComponentProps, type CSSProperties } from 'react'
 import "./style.css"
 import { WebContext } from '../../context/webContext'
+import { useContext, type ComponentProps, type CSSProperties } from "react"
 export default function DarkButton({children,...props}:ComponentProps<'button'>) {
   const {webStructure} = useContext(WebContext)
  

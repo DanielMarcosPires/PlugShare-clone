@@ -5,8 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard/page.tsx";
 import { WebProvider } from "./context/webContext.tsx";
 import Boot from "./pages/Boot/page.tsx";
-import Singin from "./pages/Singin/Singin.tsx";
-import SingUp from "./pages/Singup/Singup.tsx";
+import Singin from "./pages/Sing_in/Sing_in.tsx";
+import SingUp from "./pages/Sing_up/Sing_up.tsx";
 import Profile from "./pages/Dashboard/page/Profile/page.tsx";
 import BuscaDeCarro from "./pages/BuscaDeCarro/page.tsx";
 
