@@ -1,9 +1,7 @@
-import { useContext, useState, type CSSProperties } from "react";
-import { Heart, Home, Zap, Bell, SlidersHorizontal, CircleUser } from "lucide-react";
+import { useState } from "react";
+import { Heart, Home, Zap, Bell, SlidersHorizontal } from "lucide-react";
 import "./styles.css";
 import { Link } from "react-router-dom";
-import Profile from "../Dashboard/page/Profile/page";
-import { WebContext } from "../../context/webContext";
 
 export default function BuscaDeCarro() {
   const carsData = [
